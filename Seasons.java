@@ -1,20 +1,15 @@
-import java.util.Scanner;
+
 
 public class Seasons {
 
 	public static void main(String[] args) {
-		Scanner console = new Scanner(System.in);
-		System.out.println(season(console));
-		
-		
+		System.out.println("March 17: " + season(3, 17));
+		System.out.println("December 11: " + season(12, 11));
 	}
 	
 	
-	public static String season(Scanner console) {
-		System.out.println("Enter number of month, followed by number of day: ");
-		int month = console.nextInt();
-		int day = console.nextInt();
-		console.close();
+	public static String season(int month, int day) {
+
 		if ( (month == 12 && day >= 16) || (month == 1) || (month == 2) 
 				|| (month == 3 && day <= 15) ) {
 			return "winter";
